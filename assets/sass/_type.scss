@@ -1,0 +1,32 @@
+/*-----------------------------------------------------------------------------------*/
+/*  Typography
+/*-----------------------------------------------------------------------------------*/
+
+
+body {
+	font: {
+		family: $font-family-base;
+	}
+	
+	font-size: $font-size-base;
+	line-height: $line-height-base;
+	color: $text-color;
+	
+}
+
+.title {
+	font: {
+		family: $font-family-title;
+		weight: normal;
+	}
+	
+	font-size: $font-size-title3;
+	color: $title-color;
+}
+
+h1 { font-size: $font-size-title1; }
+h2 { font-size: $font-size-title2; }
+h3 { font-size: $font-size-title3; }
+h4 { font-size: $font-size-title3; }
+h5 { font-size: $font-size-title3; }
+h6 { font-size: $font-size-title3; }

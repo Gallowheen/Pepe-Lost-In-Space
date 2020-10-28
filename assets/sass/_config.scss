@@ -1,0 +1,73 @@
+/*-----------------------------------------------------------------------------------*/
+/*  Config
+/*-----------------------------------------------------------------------------------*/
+
+html {
+	//font-size: 62.5%;
+}
+
+// Colors
+
+$text-color: #444;
+
+$color-light: #bdbdbd;
+$color-medium: #6f6f6f;
+
+$title-color: #000;
+
+$link-color: blue;
+$hover-color: darken($link-color, 20%);
+
+
+// Type
+
+$font-family-base: Georgia, Cambria, 'Times New Roman', Times, serif;
+$font-family-title: 'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Geneva, Verdana, sans-serif;
+
+$font-size-base: 18px;
+$font-size-big: 20px;
+$font-size-small: 14px;
+
+
+$font-size-title1: 39px;
+$font-size-title2: 31px;
+$font-size-title3: 25px;
+$font-size-title4: 20px;
+$font-size-title5: 13px;
+$font-size-title6: 10px;
+
+$line-height-base: 1.45;
+$line-height-title: 1.2;
+
+
+::selection { background: #000; }
+
+// Responsive Web Design
+
+$break-small : 600px;
+$break-large : 1200px;
+$break-xlarge : 1500px;
+
+@mixin sm{
+	@media screen and (min-width: $break-small){
+		@content;
+	}
+}
+
+@mixin lg{
+	@media screen and (min-width: $break-large){
+		@content;
+	}
+}
+
+@mixin xl{
+	@media screen and (min-width: $break-xlarge){
+		@content;
+	}
+}
+
+@mixin rwd($screen){
+	@media screen and (min-width: $screen +'px'){
+		@content;
+	}
+}

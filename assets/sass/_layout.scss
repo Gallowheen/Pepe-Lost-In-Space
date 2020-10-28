@@ -1,0 +1,440 @@
+/*-----------------------------------------------------------------------------------*/
+/*  Layout
+/*-----------------------------------------------------------------------------------*/
+@font-face {
+    font-family: PixelyishFont;
+    src: url("assets/fonts/Pixely.ttf");
+    font-weight: bold;
+
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    font-family: 'Raleway', sans-serif;
+    /*background: url("https://opengameart.org/sites/default/files/seamless%20space_0.PNG");*/
+    color: white;
+    background-color: #253a61;
+
+}
+
+h1{
+    font-family: PixelyishFont;
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    margin:0;
+    display: none;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li{
+    display: inline-block;
+    font-size: 28px;
+    font-size: bold;
+    padding: 50px 25px 50px 25px;
+}
+
+button {
+    padding: 5px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    font-family: PixelyishFont;
+}
+
+a{
+    text-decoration: none;
+    color: #5184e2;
+    font-weight: bold;
+}
+
+a:hover{
+    text-decoration-line: underline;
+}
+
+.triangle{
+    fill: #202123;
+    stroke: #202123;
+    stroke-width: 2;
+}
+
+.clearfix::after{
+    display: table;
+    content: " ";
+    clear: both;
+}
+
+.container{
+	width: 80%;
+	max-width: 1300px;
+	margin : 0 auto;
+    position: relative;
+}
+
+.highlight{
+    color: white;
+    font-weight: bold;
+}
+
+.logo{
+    height: 100px;
+    margin-top: 25px;
+}
+
+.game__header{
+    background-color: #202123;
+    text-align: center;
+}
+
+.pepe{
+    width: 200px;
+    height: 200px;
+    margin-left: 20%;
+    margin-bottom: 50px;
+    margin-right: 15%;
+    float: left;
+}
+
+.pepe:hover{
+    cursor: pointer;
+}
+
+.takeOff{
+    animation: vaisseau;
+    animation-duration: 4s;
+}
+
+.ready{
+    animation: levitation 2s linear both  infinite;
+}
+
+@keyframes levitation {
+    0%      { -webkit-transform: translate(0)}
+    17%     { -webkit-transform: translate(-25px,0)}
+    33%     { -webkit-transform: translate(0,0)}
+    50%     { -webkit-transform: translate(25px,0)}
+    67%     { -webkit-transform: translate(0,0)}
+    83%     { -webkit-transform: translate(-25px,0)}
+    100%    { -webkit-transform: translate(0)}
+}
+
+@keyframes vaisseau {
+    0%   {transform: scale(1);}
+    50%  {transform: scale(0.7);}
+    100% {transform: scale(0.5);transform : translateY(-5000%);}
+}
+
+.introduction__div{
+    width: 50%;
+    margin-top: 5%;
+    padding: 25px;
+    float: left;
+    /*background-color: #0000008f;*/
+}
+
+.introduction__div--right{
+    float: right;
+    width: 100%;
+}
+
+.introduction__title{
+    padding-top: 5%;
+    font-family: PixelyishFont;
+    font-size: 48px;
+    padding-left: 100px;
+    color: white;
+}
+
+.canvas{
+    border: 16px solid white;
+}
+
+.status{
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: PixelyishFont;
+    z-index: 5;
+    margin-top: 25px;
+    text-transform: uppercase;
+}
+
+.section__game{
+    background-color: #202123;
+}
+
+.game__mainTitle{
+    font-size: 72px;
+    width: 100%;
+    padding-left: 0;
+    padding-top: 25px;
+    padding-top: 25px;
+    display: none;
+}
+
+.game__title{
+    display: none;
+}
+
+.game{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.game__overlay--main{
+    background-image: url("assets/img/ecran.gif");
+    display: block;
+}
+
+.game__overlay{
+    width: 800px;
+    height: 500px;
+    position: absolute;
+}
+
+.game__overlay--menu{
+    display: none;
+    background-color: #00000085;
+}
+
+.game__overlay--over{
+    display: none;
+    background-color: #00000085;
+    color: white;
+    text-transform: uppercase;
+}
+
+.game__over{
+    font-family: PixelyishFont;
+    font-size: 50px;
+    margin-top: 75px;
+    text-align: center;
+}
+
+.game__score{
+    font-family: PixelyishFont;
+    font-size: 25px;
+    text-align: center;
+}
+
+.game__div{
+    width: 100%;
+    padding-top: 50px;
+    margin-top: 25px;
+}
+
+.game__p{
+    width: 80%;
+}
+
+.menu__button{
+    font-family: PixelyishFont;
+	border: 3px solid white;
+    background-color: transparent;
+    color: white;
+    padding: 25px;
+    height: 60px;
+    width: 180px;
+    margin-left: 315px;
+    margin-top: 75px;
+    border-radius: 5%;
+    line-height: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    float: left;
+}
+
+.bonus{
+    width: 100px;
+    height: 100px;
+    margin-left: 15%;
+    margin-bottom: 25px;
+    margin-right: 15%;
+    margin-top: 25px;
+    float: left;
+}
+
+.fireUp{
+    margin-top: 45px;
+}
+
+.heal{
+    margin-top: 25px;
+}
+
+.game__ready{
+    text-align: center;
+    margin-top: 75px;
+    font-family: PixelyishFont;
+    font-size: 48px;
+    margin-bottom: 50px;
+}
+
+.menu__button:hover{
+	background-color: #ffffff85;
+}
+
+.menu__button--over{
+    margin-top: 100px;
+}
+
+
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+  //CSS
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1024px) and (max-width: 1280px) {
+  
+    .pepe{
+        padding-left: 0px;
+        padding-top: 15px;
+        margin-left: 15%;
+        padding-right: 50px;
+    }
+
+    .game__mainTitle{
+        font-size: 60px;
+    }
+
+     .introduction__div{
+        width: 80%;
+    }
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .game__mainTitle{
+        font-size: 48px;
+    }
+
+    .pepe{
+        padding-left: 15px;
+        padding-top: 55px;
+    }
+
+    .container{
+        width: 700px;
+    }
+
+    .game__overlay{
+        display: none;
+    }
+
+    canvas{
+        display: none;
+    }
+
+    .introduction__title{
+        font-size: 36px;
+    }
+
+    .introduction__div{
+        padding: 25px 0 25px 0;
+        width: 100%;
+    }
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  //CSS
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  
+  //CSS
+  
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .container{
+        width: 300px;
+    }
+
+    .game__mainTitle{
+        font-size: 24px;
+    }
+
+    .introduction__title{
+        font-size: 20px;
+        padding-left: 0;
+    }
+
+    .introduction__p{
+        font-size: 18px;
+    }
+
+    .pepe{
+        padding-bottom: 75px;
+        padding-top: 0;
+        padding-left: 50px;
+        float: none;
+    }
+
+    .introduction__p--right{
+        margin-left: 0;
+    }
+
+    .introduction__div{
+        padding: 25px 0 25px 0;
+        width: 100%;
+    }
+
+    .game__overlay{
+        display: none;
+    }
+
+    canvas{
+        display: none;
+    }
+  
+}
