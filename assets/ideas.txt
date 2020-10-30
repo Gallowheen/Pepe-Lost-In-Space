@@ -1,0 +1,11 @@
+rajouter des vrais ennemies en gardant les météorites
+animer le bouclier
+animer les réacteurs 
+mettre de la vie aux astéroïdes selon leur tailles
+animer le vaisseau quand il prend des dégâts
+
+rajouter un laser qui demande des charges mais one shot tout sur son passage pendant 3 secondes
+rajouter des décors random dans le fond
+faire une animation au début comme si tu quittais une planète
+rendre le jeu resizable pour savoir le foutre en plein écran
+détecter le setup keybord de l'utilisateur pour remplacer zqsd par ses équivalets
