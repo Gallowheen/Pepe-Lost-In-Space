@@ -8,4 +8,5 @@ rajouter un laser qui demande des charges mais one shot tout sur son passage pen
 rajouter des décors random dans le fond
 faire une animation au début comme si tu quittais une planète
 rendre le jeu resizable pour savoir le foutre en plein écran
-détecter le setup keybord de l'utilisateur pour remplacer zqsd par ses équivalets
+détecter le setup keybord de l'utilisateur pour remplacer zqsd par ses équivalents OU donner la possibilité à l'utilisateur de bind ses touches et 
+les stocker dans un cookies
