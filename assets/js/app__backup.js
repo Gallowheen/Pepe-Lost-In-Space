@@ -1,5 +1,3 @@
-
-
 $(document).ready(function(){
 	var canvas = document.getElementById("Canvas");
 	var ctx = canvas.getContext("2d");
@@ -44,8 +42,49 @@ $(document).ready(function(){
 
 	var send = document.getElementById("send");
 	send.addEventListener("click",function(){
+
 		sendScore(-score)
+		// var scoreToSend = -score;
+		// var pseudo = "ZZZ";
+		// //console.log(scoreToSend);	
+		// if(!$('#pseudo').val() == ""){
+		// 	pseudo = $('#pseudo').val().toUpperCase();
+		// }
+		// if(scoreToSend > 0){
+
+		// 	$.ajax({
+		// 		method: "POST",
+		// 		data:{score:scoreToSend,pseudo:pseudo},
+		// 		url:"updatescore.php",
+		// 	})
+		// 	.done(function(result){ 
+		// 		console.log(result)
+		// 		//On charge le highscore après s'être assuré que le score est dans la base de donnée
+		// 		//Comme Ajax est asynchrone
+		// 		$.getJSON('highscore.php',jsonCallBack);
+
+		// 		function jsonCallBack(data){
+		// 			if(data != undefined){
+		// 				highscore = data.score[0].score;
+		// 				hiScore = data.score[0].score;
+		// 				//console.log(data.score[0].score);
+
+		// 				var html = "<li class='list__header clearfix'>"+"<div>"+"Rank"+"</div>"+"<div>"+"Score"+"</div>"+"<div>"+"Name"+"</div>"+"</li>";
+
+		// 				for(var i = 0; i < 10 && data.score[i].pseudo != undefined; i++){
+		// 					$(".top10").html(html += "<li class='list__el clearfix'>"+ "<div>"+ (i+1) +"</div>" +"<div>" + data.score[i].score + "</div>" +  "<div>" + data.score[i].pseudo +"</div>" + "</li>");
+		// 				}
+
+		// 				$(".top10").html(html);
+		// 			}
+		// 			//console.log(highscore);
+		// 		}
+		// 		jsonCallBack();
+		// 	});
+		// }
+		// $('.pseudo__div').css('display', 'none');
 	});
+
 
 	//Information du personnage
 	var posX = canvas.width / 2 - 22.5;
@@ -164,9 +203,7 @@ $(document).ready(function(){
 	var tickSpeed = 4;
 	var frame = 1;
 	var sprite = new Image();
-	sprite.src = "assets/img/sprite_shield.png";
-	var sprite__shield = new Image();
-	sprite__shield.src = "assets/img/sprite_shield.png";
+	sprite.src = "assets/img/sprite.png";
 	var offsetX = 0;
 	var offsetY = 0;
 
@@ -192,6 +229,17 @@ $(document).ready(function(){
 	var alertSound = new Audio("assets/sound/alert.wav");
 	alertSound.volume = 0.05;
 	alertSound.muted = true;
+
+	//anticheat
+	var element;
+	var showWarning = false;
+	//L'anticheat ne fonctionne que sur Chrome
+	var isFirefox = typeof InstallTrigger !== 'undefined';
+	var isIE = /*@cc_on!@*/false || !!document.documentMode;
+	var isEdge = !isIE && !!window.StyleMedia;
+	var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+	var isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || safari.pushNotification);
+	var devtools = false;
 
 	//HighScore
 	var highscore;
@@ -355,7 +403,6 @@ $(document).ready(function(){
 			}
 		}
 		if(!demoIsOn){
-
 			//Si un bonus existe en jeu
 			if (listeBonus.length >= 1){
 				//Pour chaque bonus
@@ -856,9 +903,9 @@ $(document).ready(function(){
 					isInvulnerable = !isInvulnerable;
 					shield.currentTime = 0;
 					shieldSound.play();
-					// herosImg.src = "assets/img/vaisseau5.png";
-					isInvulnerable = !isInvulnerable;
+					herosImg.src = "assets/img/vaisseau5.png";
 
+					isInvulnerable = !isInvulnerable;
 					setTimeout(function(){
 						isInvulnerable =! isInvulnerable;
 						herosImg.src = "assets/img/vaisseau2.png";
