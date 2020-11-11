@@ -1,10 +1,5 @@
 <?php
 
-// $host = "dylanernlkdylan.mysql.db";
-// $user = "dylanernlkdylan";
-// $mdp = "Gallow800219938585";
-// $base = "dylanernlkdylan";
-
 $host = "127.0.0.1";
 $user = "root";
 $mdp = "";
